@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+{# jinja를 사용했을 떄 주석 처리
+    for문 or if문 형태 {% %}  , endfor라고 알려줘야한다.
+      플라스크 설치하면 쓸 수 있는 : {{ }} {%}  --> #}
+ 
+<body>
+  
+    <ul>
+        {% for movie in movies %}
+            {% if movie == '조카' %}
+                <li>{{ movie }} || 이 영화 진짜 재밌어</li>
+            {% else %}
+                <li>{{ movie }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+</html>
